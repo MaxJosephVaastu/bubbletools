@@ -27,6 +27,7 @@ package bubbletools.ui.eventing {
 		
 		public static var WINDOW_PRESS:String = "window_press";
 		public static var WINDOW_RELEASE:String = "window_release";
+		public static var WINDOW_DROPPED_ON:String = "window_dropped_on";
 		
 		// TitleBar Events
 		
@@ -42,6 +43,8 @@ package bubbletools.ui.eventing {
 		public static var MENU_OUT:String = "menu_out";
 		public static var MENU_RELEASE_OUTSIDE:String = "menu_release_outside";
 		public static var MENU_ITEM_SELECTED:String = "menu_item_selected";
+		public static var MENU_SHOW:String = "menu_show";
+		public static var MENU_HIDE:String = "menu_hide";
 		
 		// MenuItem Events
 		
