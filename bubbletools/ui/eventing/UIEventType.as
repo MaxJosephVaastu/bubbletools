@@ -95,7 +95,8 @@ package bubbletools.ui.eventing {
 		public static var BUFFER_EMPTY:String = "buffer_empty";
 		public static var METADATA_LOADED:String = "metadata_loaded";
 		public static var NETSTREAM_PLAY_START:String = "netstream_play_start";
-		public static var NETSTREAM_PLAY_STOP:String = "netstream_play_stop";
+		public static var NETSTREAM_PLAY_STOP:String = "netstream_play_stop";   
+		public static var NETSTREAM_EVENT_DUMP:String = "netstream_event_dump";
 		
 		// VideoSeek Events
 		
