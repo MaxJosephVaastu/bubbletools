@@ -168,12 +168,12 @@ package bubbletools.ui.framework {
 		}
 	
 		private function textEdited(edit:TextEvent):void {
-			//trace("flash bug : TextEvent.TEXT_INPUT --> "+textDisplayField.text);
+			//Debug.output(this, "flash bug : TextEvent.TEXT_INPUT --> "+textDisplayField.text);
 			//parameters.setText(textDisplayField.text);
 		}
 	
 		private function textChanged(evt:Event):void {
-			trace("actual text :       Event.CHANGE --> "+textDisplayField.text);
+			Debug.output(this, "actual text :       Event.CHANGE --> "+textDisplayField.text);
 			parameters.setText(evt.target.text);
 		}
 		
