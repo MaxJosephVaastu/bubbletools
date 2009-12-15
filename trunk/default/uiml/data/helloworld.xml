@@ -20,6 +20,37 @@
 			<Visible>true</Visible>
 		</Parameters>
 		<Subcomponents>
+		  <Component type="TabBar" id="main_nav">
+			<Parameters>
+				<PositionX>0</PositionX>
+				<PositionY>0</PositionY>
+				<Width>1000</Width>
+				<Height>40</Height>    
+				<Outline>1</Outline>
+				<Color>0xFFAE6699</Color>
+				<Visible>true</Visible>       
+				<ListedType type="PanelItem" id="PanelItem">
+   					<Parameters>
+						<PositionX>0</PositionX>
+						<PositionY>0</PositionY>
+						<Width>150</Width>
+						<Height>20</Height>
+						<TextColor>0xFF111111</TextColor>
+						<TextWidth>150</TextWidth>
+						<TextHeight>20</TextHeight>
+						<Outline>0</Outline>
+						<ColorOver>0xFF440000</ColorOver>
+						<Color>0xFF111111</Color>
+					</Parameters>
+				</ListedType>
+				<TabBarDirection>right</TabBarDirection>
+				<List>
+					<Item><Text>test1</Text><Data>test_1</Data></Item>
+					<Item><Text>test2</Text><Data>test_2</Data></Item>
+					<Item><Text>test3</Text><Data>test_3</Data></Item>
+				</List>                          		
+			</Parameters>    
+		</Component>         
 		<Component type="Window" id="status_window">
 			<Parameters>
 				<PositionX>300</PositionX>
@@ -105,17 +136,17 @@
 				<IconDroppable>true</IconDroppable>
 				<Stack>true</Stack>
 			</Parameters>
-				<Subcomponents>
-					<Component type="Button" id="button_window_2">
-						<Parameters>
-							<PositionX>20</PositionX>
-							<PositionY>45</PositionY>
-							<Width>100</Width>
-							<Height>30</Height>
-							<Text>Button B</Text>
-						</Parameters>
-					</Component>
-				</Subcomponents>
+			<Subcomponents>
+				<Component type="Button" id="button_window_2">
+					<Parameters>
+						<PositionX>20</PositionX>
+						<PositionY>45</PositionY>
+						<Width>100</Width>
+						<Height>30</Height>
+						<Text>Button B</Text>
+					</Parameters>
+				</Component>
+			</Subcomponents>  
 		</Component>
 		<Component type="Window" id="example_window_3">
 			<Parameters>
@@ -152,8 +183,8 @@
 							<URL>http://upload.wikimedia.org/wikipedia/commons/d/dc/Mech_2_3D.png</URL>
 						</Parameters>
 					</Component>
-				</Subcomponents>
-			</Component>
+				</Subcomponents>          
+			</Component>      
 		</Subcomponents>
 	</Component>
 </UIML>

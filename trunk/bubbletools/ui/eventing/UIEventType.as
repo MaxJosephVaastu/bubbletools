@@ -21,7 +21,23 @@ package bubbletools.ui.eventing {
 		public static var BUTTON_RELEASE_OUTSIDE:String = "button_release_outside";
 		public static var BUTTON_DRAG_OVER:String = "button_drag_over";
 		public static var BUTTON_DRAG_OUT:String = "button_drag_out";
-		public static var BUTTON_MOVE:String = "button_move";
+		public static var BUTTON_MOVE:String = "button_move";  
+		
+		// Panel Item Events
+		
+		public static var PANEL_ITEM_RELEASE:String = "panel_item_release";    
+		public static var PANEL_ITEM_OVER:String = "panel_item_over";
+		public static var PANEL_ITEM_OUT:String = "panel_item_out";
+		public static var PANEL_ITEM_PRESS:String = "panel_item_press"; 
+		
+		// Tab Bar Events   
+		
+		public static var TAB_BAR_OVER = "tab_bar_over";
+		public static var TAB_BAR_OUT = "tab_bar_out";   
+		public static var TAB_BAR_PRESS = "tab_bar_press";   
+		public static var TAB_BAR_RELEASE = "tab_bar_release";   
+		public static var TAB_BAR_RELEASE_OUTSIDE = "tab_bar_release_outside";  
+		public static var TAB_BAR_ITEM_SELECTED = "tab_bar_item_selected";                                                 
 		
 		// Window Events
 		
