@@ -1,11 +1,24 @@
 <UIML>
 	<Theme>
 		<TintColor r="0" g="0" b="0" />
-		<OutlineColor color="0x666666" />
+		<OutlineColor color="0x666666" /> 
+		<BackgroundColor color="0x666666" />
+		<Scale mode="fullbleed" />
 		<Defaults>
 			<ButtonDefaultState image="btn_default.png"/>
 			<ButtonOverState image="btn_over.png" />
 			<ButtonDownState image="btn_down.png" />
+ 			<ScrollBarImage image="scrollbar_white_vertical.jpg" />
+			<ScrollBarSliderImage image="slider_white_vertical.jpg" />  
+			<ScrollBarArrowMaxDefault image="arrow_up.png" />     
+			<ScrollBarArrowMaxOver image="arrow_up.png" />      
+			<ScrollBarArrowMaxDown image="arrow_up.png" />      
+			<ScrollBarArrowMinDefault image="arrow_down.png" />      
+			<ScrollBarArrowMinOver image="arrow_down.png" />      
+			<ScrollBarArrowMinDown image="arrow_down.png" />
+			<PanelButtonDefaultState image="btn_default.png"/>
+			<PanelButtonOverState image="btn_over.png"/>  
+			<PanelButtonDownState image="btn_down.png"/>     
 		</Defaults>
 	</Theme>
 	<Component type="Window" id="main_window">
@@ -15,7 +28,7 @@
 			<Width>1000</Width>
 			<Height>800</Height>
 			<Color>0xFFEEEEEE</Color>
-			<Outline>0</Outline>
+			<Outline>1</Outline>
 			<IconDroppable>true</IconDroppable>
 			<Visible>true</Visible>
 		</Parameters>
@@ -35,12 +48,14 @@
 						<PositionY>0</PositionY>
 						<Width>150</Width>
 						<Height>20</Height>
-						<TextColor>0xFF111111</TextColor>
+						<TextColor>0xFF000000</TextColor>
 						<TextWidth>150</TextWidth>
+						<FontSize>15</FontSize>
+						<TextAlign>center</TextAlign> 
 						<TextHeight>20</TextHeight>
 						<Outline>0</Outline>
 						<ColorOver>0xFF440000</ColorOver>
-						<Color>0xFF111111</Color>
+						<Color>0xFFFFFFFF</Color>
 					</Parameters>
 				</ListedType>
 				<TabBarDirection>right</TabBarDirection>
@@ -53,8 +68,8 @@
 		</Component>         
 		<Component type="Window" id="status_window">
 			<Parameters>
-				<PositionX>300</PositionX>
-				<PositionY>10</PositionY>
+				<PositionX>500</PositionX>
+				<PositionY>50</PositionY>
 				<Width>200</Width>
 				<Height>100</Height>
 				<Color>0xFFAE6699</Color>
@@ -91,7 +106,11 @@
 				<Draggable>true</Draggable>
 				<Visible>true</Visible>
 				<IconDroppable>true</IconDroppable>
-				<Stack>true</Stack>
+				<Stack>true</Stack> 
+				<ScrollVertical>true</ScrollVertical>  
+				<ScrollBarArrows>true</ScrollBarArrows> 
+				<ScrollBarSize>18</ScrollBarSize>
+				<ScrollBarSliderSize>60</ScrollBarSliderSize>     
 			</Parameters>
 			<Subcomponents>
 				<Component type="Button" id="button_window_1">
@@ -137,10 +156,46 @@
 				<Stack>true</Stack>
 			</Parameters>
 			<Subcomponents>
+				<Component type="ListBox" id="example_list">
+					<Parameters>
+						<ListedType type="ListItem" id="listitem">
+							<Parameters>
+								<PositionX>0</PositionX>
+								<PositionY>0</PositionY>
+								<Width>260</Width>
+								<Height>20</Height>
+								<TextColor>0xFF222222</TextColor>
+								<Color>0xFFFFFFFF</Color>
+								<ColorOver>0xFF591F00</ColorOver>
+								<ColorDown>0xFF333333</ColorDown>
+								<Outline>0</Outline>
+							</Parameters>
+						</ListedType>
+						<PositionX>10</PositionX>
+						<PositionY>35</PositionY>
+						<Width>280</Width>
+						<Height>100</Height>
+						<Color>0xFFCCCCCC</Color>
+						<ScrollVertical>true</ScrollVertical>
+						<ScrollBarArrows>true</ScrollBarArrows>
+						<ScrollBarSize>18</ScrollBarSize>
+						<ScrollBarSliderSize>60</ScrollBarSliderSize>
+						<ScrollBarSliderOutline>0</ScrollBarSliderOutline> 
+						<List>
+							<Item><Text>list1</Text><Data>test_1</Data></Item>
+							<Item><Text>list2</Text><Data>test_2</Data></Item>
+							<Item><Text>list3</Text><Data>test_3</Data></Item>   
+							<Item><Text>list4</Text><Data>test_4</Data></Item>   
+							<Item><Text>list5</Text><Data>test_5</Data></Item>   
+							<Item><Text>list6</Text><Data>test_6</Data></Item>   
+							<Item><Text>list7</Text><Data>test_7</Data></Item>   
+						</List>  
+					</Parameters>	
+				</Component>    
 				<Component type="Button" id="button_window_2">
 					<Parameters>
 						<PositionX>20</PositionX>
-						<PositionY>45</PositionY>
+						<PositionY>120</PositionY>
 						<Width>100</Width>
 						<Height>30</Height>
 						<Text>Button B</Text>
@@ -162,7 +217,12 @@
 				<Draggable>true</Draggable>
 				<Visible>true</Visible>
 				<IconDroppable>true</IconDroppable>
-				<Stack>true</Stack>
+				<Stack>true</Stack>  
+				<ScrollVertical>true</ScrollVertical>  
+				<ScrollBarArrows>true</ScrollBarArrows>
+				<ScrollBarArrowsClustered>true</ScrollBarArrowsClustered>  
+				<ScrollBarSize>18</ScrollBarSize>
+				<ScrollBarSliderSize>60</ScrollBarSliderSize>   
 			</Parameters>
 				<Subcomponents>
 					<Component type="Button" id="button_window_3">
