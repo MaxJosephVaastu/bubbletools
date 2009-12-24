@@ -20,7 +20,7 @@ package bubbletools.core.library {
 			private var updates:Array;
 	
 			public function BitmapProxy(targetFile:BitmapFile) {
-				proxyData = new BitmapData(100, 100, true, 0x00000000);
+				proxyData = new BitmapData(1, 1, true, 0x00000000);
 				updates = new Array();
 				targetFile.setProxy(this);
 			}
