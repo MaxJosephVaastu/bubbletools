@@ -26,7 +26,10 @@
 			<PositionX>0</PositionX>
 			<PositionY>0</PositionY>
 			<Width>1000</Width>
-			<Height>800</Height>
+			<Height>800</Height> 
+			<InheritWidth>true</InheritWidth>
+			<Image>testpattern.png</Image>
+			<TileBackground>true</TileBackground>
 			<Color>0xFFEEEEEE</Color>
 			<Outline>1</Outline>
 			<IconDroppable>true</IconDroppable>
@@ -35,7 +38,7 @@
 		<Subcomponents>
 		  <Component type="TabBar" id="main_nav">
 			<Parameters>
-				<PositionX>0</PositionX>
+				<PositionX>50</PositionX>
 				<PositionY>0</PositionY>
 				<Width>1000</Width>
 				<Height>40</Height>    
