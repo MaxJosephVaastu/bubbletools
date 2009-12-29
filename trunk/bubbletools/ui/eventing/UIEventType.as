@@ -33,6 +33,7 @@ package bubbletools.ui.eventing {
 		public static var PANEL_ITEM_PRESS:String = "panel_item_press";    
 		public static var PANEL_ITEM_SELECTED:String = "panel_item_selected";
 		public static var PANEL_ITEM_DESELECTED:String = "panel_item_deselected";
+		public static var PANEL_ITEM_SELECTION_BLOCKED:String = "panel_item_selection_blocked";    
 		
 		// Tab Bar Events   
 		
