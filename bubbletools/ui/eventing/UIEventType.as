@@ -10,7 +10,11 @@ package bubbletools.ui.eventing {
 	
 	import bubbletools.core.eventing.EventType;
 
-	public class UIEventType extends EventType {
+	public class UIEventType extends EventType {     
+		
+		// UI Events
+		
+		public static var UI_RESIZE:String = "ui_resize";
 		
 		// Button Events
 		
