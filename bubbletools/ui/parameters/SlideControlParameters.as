@@ -8,7 +8,7 @@
 
 package bubbletools.ui.parameters {
 	
-	import bubbletools.ui.framework.InterfaceComponent;
+	import bubbletools.ui.framework.BTComponent;
 	import bubbletools.ui.parameters.InterfaceParameters;
 
 	public class SlideControlParameters extends InterfaceParameters {

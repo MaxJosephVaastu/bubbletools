@@ -8,7 +8,7 @@
 
 package bubbletools.ui.interfaces {
 	
-import bubbletools.ui.framework.InterfaceComponent;
+import bubbletools.ui.framework.BTComponent;
 //
 //	Defines the minimum functions an interface description class must implement
 //
@@ -20,7 +20,7 @@ import bubbletools.ui.framework.InterfaceComponent;
 	
 		// Returns the root of this UI
 	
-		function getInterface():InterfaceComponent;
+		function getInterface():BTComponent;
 	}
 
 }

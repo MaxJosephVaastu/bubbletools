@@ -4,16 +4,4 @@
 // Developer : Michael Szypula
 // Contact : michael.szypula@gmail.com
 // License Information : Contact Developer to obtain license agreement.
-// =================================================================================================
-
-package bubbletools.ui.main {
-	
-	import bubbletools.ui.framework.BTComponent;
-
-	public class InterfaceBuilder {
-		function InterfaceBuilder(){
-		
-		}
-	}
-
-}
+// =================================================================================================         
