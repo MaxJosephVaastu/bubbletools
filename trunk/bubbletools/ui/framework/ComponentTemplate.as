@@ -17,11 +17,11 @@ package bubbletools.ui.framework {
 	import bubbletools.ui.parameters.*
 	import bubbletools.ui.framework.ComponentView;
 
-	public class InterfaceComponentTemplate extends InterfaceComponent {
+	public class BTComponentTemplate extends BTComponent {
 		
-		private var parameters:InterfaceComponentParameters;
+		private var parameters:BTComponentParameters;
 	
-		public function InterfaceComponentTemplate(parentComponent:InterfaceComponent) {
+		public function BTComponentTemplate(parentComponent:BTComponent) {
 			super(parentComponent);
 			componentType = "Template";
 			allowSubcomponents = true;
@@ -34,16 +34,16 @@ package bubbletools.ui.framework {
 		public override function setParameters(newParameters:IParameters):void {
 		
 			globalParameters = newParameters;
-			parameters = InterfaceComponentParameters(newParameters);
+			parameters = BTComponentParameters(newParameters);
 		
 		}
 		
 		public override function displayComponent():void {
-			// Extra display commands called after InterfaceComponent.display()
+			// Extra display commands called after BTComponent.display()
 		}
 		
-		public override function registerInternal(reporter:InterfaceComponent, interfaceEvent:UIEvent):void {
-			// Extra event handling commands called after InterfaceComponent.registerReport()
+		public override function registerInternal(reporter:BTComponent, interfaceEvent:UIEvent):void {
+			// Extra event handling commands called after BTComponent.registerReport()
 		}
 
 		public override function handleMouseEvent(clickType:String):void {

@@ -10,9 +10,9 @@ package bubbletools.ui.interfaces {
 	
 	import bubbletools.ui.eventing.UIEvent;
 
-	//	Defines the minimum functions an InterfaceComponent must implement in order to pass actions outside of the UI.
+	//	Defines the minimum functions an BTComponent must implement in order to pass actions outside of the UI.
 	//	
-	//  This interface is designed to be implemented only by InterfaceComponent subclasses which have been assigned
+	//  This interface is designed to be implemented only by BTComponent subclasses which have been assigned
 	//  responders to certain events.
 	
 	public interface Reporter {
