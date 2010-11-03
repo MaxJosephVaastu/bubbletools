@@ -53,7 +53,7 @@ package bubbletools.ui.parameters {
 			return(closeButton);
 		}
 		// Close button image
-		public function setCloseButtonImage(closeButtonImage:String) {
+		public function setCloseButtonImage(closeButtonImage:String):void {
 			this.closeButtonImage = closeButtonImage;
 		}
 		public function getCloseButtonImage():String {

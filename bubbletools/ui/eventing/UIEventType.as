@@ -41,12 +41,12 @@ package bubbletools.ui.eventing {
 		
 		// Tab Bar Events   
 		
-		public static var TAB_BAR_OVER = "tab_bar_over";
-		public static var TAB_BAR_OUT = "tab_bar_out";   
-		public static var TAB_BAR_PRESS = "tab_bar_press";   
-		public static var TAB_BAR_RELEASE = "tab_bar_release";   
-		public static var TAB_BAR_RELEASE_OUTSIDE = "tab_bar_release_outside";  
-		public static var TAB_BAR_ITEM_SELECTED = "tab_bar_item_selected";                                                 
+		public static var TAB_BAR_OVER:String = "tab_bar_over";
+		public static var TAB_BAR_OUT:String = "tab_bar_out";   
+		public static var TAB_BAR_PRESS:String = "tab_bar_press";   
+		public static var TAB_BAR_RELEASE:String = "tab_bar_release";   
+		public static var TAB_BAR_RELEASE_OUTSIDE:String = "tab_bar_release_outside";  
+		public static var TAB_BAR_ITEM_SELECTED:String = "tab_bar_item_selected";                                                 
 		
 		// Window Events
 		
