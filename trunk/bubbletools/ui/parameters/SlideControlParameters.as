@@ -54,14 +54,14 @@ package bubbletools.ui.parameters {
 			return(controlDirection);
 		}
 		// Slider Background Color
-		public function setSliderButtonColor(sliderButtonColor):void {
+		public function setSliderButtonColor(sliderButtonColor:uint):void {
 			this.sliderButtonColor = sliderButtonColor;
 		}
 		public function getSliderButtonColor():Number {
 			return(sliderButtonColor);
 		}
 		// Slider Background Down Color
-		public function setSliderButtonColorDown(sliderButtonColorDown):void {
+		public function setSliderButtonColorDown(sliderButtonColorDown:uint):void {
 			this.sliderButtonColorDown = sliderButtonColorDown;
 		}
 		public function getSliderButtonColorDown():Number {
