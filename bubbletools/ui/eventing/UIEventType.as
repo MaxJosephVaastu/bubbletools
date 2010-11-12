@@ -127,6 +127,10 @@ package bubbletools.ui.eventing {
 		
 		public static var VIDEO_SEEK:String = "video_seek";
 		
+		// HTML Display Events
+		
+		public static var HTML_SIZE_CHANGED:String = "html_size_changed";
+		
 		// Icon Events
 		
 		public static var ICON_OVER:String = "icon_over";
