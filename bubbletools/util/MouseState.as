@@ -7,58 +7,64 @@
 // =================================================================================================
 
 package bubbletools.util {
-	
+
 	// Generic mouse state
 
 	public class MouseState {
-	
+
 		private var mouseIsDown:Boolean;
 		private var mouseIsOver:Boolean;
 		private var isDragging:Boolean;
 
-		public function MouseState(){
+		public function MouseState() {
 			mouseIsDown = false;
 			mouseIsOver = false;
 			isDragging = false;
 		}
+
 		public function update(action:String):void {
-			switch(action) {
-				case "down" :
+			switch (action) {
+				case "down":
 					SET_DOWN_STATE(true);
 					break;
-				case "up" :
+				case "up":
 					SET_DOWN_STATE(false);
 					break;
-				case "over" :
+				case "over":
 					SET_OVER_STATE(true);
 					break;
-				case "out" :
+				case "out":
 					SET_OVER_STATE(false);
 					break;
-				case "drag" :
+				case "drag":
 					SET_DRAG_STATE(true);
 					break;
-				case "stopdrag" :
+				case "stopdrag":
 					SET_DRAG_STATE(false);
 					break;
 			}
 		}
+
 		public function MOUSE_DOWN():Boolean {
-			return(mouseIsDown);
+			return (mouseIsDown);
 		}
+
 		public function MOUSE_OVER():Boolean {
-			return(mouseIsOver);
+			return (mouseIsOver);
 		}
+
 		public function DRAGGING():Boolean {
-			return(isDragging);
+			return (isDragging);
 		}
-	
+
 		public function SET_DOWN_STATE(state:Boolean):void {
 			mouseIsDown = state;
 		}
+
 		public function SET_OVER_STATE(state:Boolean):void {
 			mouseIsOver = state;
 		}
+
 		public function SET_DRAG_STATE(state:Boolean):void {
 			isDragging = state;
 		}

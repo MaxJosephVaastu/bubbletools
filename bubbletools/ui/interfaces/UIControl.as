@@ -9,14 +9,15 @@
 package bubbletools.ui.interfaces {
 
 	import bubbletools.ui.eventing.UIEvent;
+
 	//
 	//	Defines the minimum functions a class which needs to respond to calls from BTComponent subclasses adhering
 	//  to the Reporter interface must implement
 	//
 	public interface UIControl {
-	
+
 		// The user interface communicates to the class via interfaceCall and sends a UIEvent
-	
+
 		function interfaceCall(interfaceEvent:UIEvent):void;
 	}
 

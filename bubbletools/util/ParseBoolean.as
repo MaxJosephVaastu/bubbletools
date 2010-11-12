@@ -7,9 +7,9 @@
 // =================================================================================================
 
 package bubbletools.util {
-	
+
 	public class ParseBoolean {
-		
+
 		private static var _instance:ParseBoolean = null;
 
 		public static function instance():ParseBoolean {
@@ -18,17 +18,18 @@ package bubbletools.util {
 			}
 			return ParseBoolean._instance;
 		}
-	
-		public function ParseBoolean(){}
-	
+
+		public function ParseBoolean() {
+		}
+
 		public static function getValue(boolString:String):Boolean {
 			var boolValue:Boolean = false;
-			if(boolString == "true") {
+			if (boolString == "true") {
 				boolValue = true;
 			}
-			return(boolValue);
+			return (boolValue);
 		}
-	
+
 	}
 
 }

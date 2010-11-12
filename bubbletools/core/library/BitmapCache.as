@@ -7,36 +7,40 @@
 // =================================================================================================
 
 package bubbletools.core.library {
-	
-import flash.display.BitmapData;
 
-public class BitmapCache {
-	
-	private static var _instance:BitmapCache = null;
-	private var cacheArray:Array;
-	
-	public static function instance():BitmapCache {
-		if (BitmapCache._instance == null) {
-			BitmapCache._instance = new BitmapCache();
+	import flash.display.BitmapData;
+
+	public class BitmapCache {
+
+		private static var _instance:BitmapCache = null;
+		private var cacheArray:Array;
+
+		public static function instance():BitmapCache {
+			if (BitmapCache._instance == null) {
+				BitmapCache._instance = new BitmapCache();
+			}
+			return BitmapCache._instance;
 		}
-		return BitmapCache._instance;
-	}
-	public function BitmapCache(){
-		cacheArray = new Array;
-	}
-	public function addBitmap(itemName:String, bmp:BitmapData):void {
-		cacheArray[itemName] = bmp;
-	}
-	public function hasBitmap(itemName):Boolean {
-		if(cacheArray[itemName] != null) {
-			return(true);
-		} else {
-			return(false);
+
+		public function BitmapCache() {
+			cacheArray = new Array;
+		}
+
+		public function addBitmap(itemName:String, bmp:BitmapData):void {
+			cacheArray[itemName] = bmp;
+		}
+
+		public function hasBitmap(itemName):Boolean {
+			if (cacheArray[itemName] != null) {
+				return (true);
+			} else {
+				return (false);
+			}
+		}
+
+		public function retrieveBitmap(itemName):BitmapData {
+			return (cacheArray[itemName]);
 		}
 	}
-	public function retrieveBitmap(itemName):BitmapData {
-		return(cacheArray[itemName]);
-	}
-}
 
 }

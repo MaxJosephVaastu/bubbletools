@@ -7,19 +7,19 @@
 // =================================================================================================
 
 package bubbletools.ui.parameters {
-	
+
 	import flash.display.BitmapData;
 	import bubbletools.ui.parameters.InterfaceParameters;
 
 	public class VideoDisplayParameters extends InterfaceParameters {
-	
-		public function VideoDisplayParameters(){
+
+		public function VideoDisplayParameters() {
 			super();
 			componentType = "VideoDisplay";
 			setColor(0xFF000000);
 			useGlobalTint = false;						// default color is not to tint VideoDisplay
 		}
-	
+
 	}
 
 }

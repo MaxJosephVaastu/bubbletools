@@ -7,13 +7,13 @@
 // =================================================================================================
 
 package bubbletools.ui.parameters {
-	
+
 	import bubbletools.ui.parameters.InterfaceParameters;
 
 	public class HTMLDisplayParameters extends InterfaceParameters {
-	
+
 		private var url:String;								// the url to display
-		
+
 		private var scrollHorizontal:Boolean;
 		private var scrollVertical:Boolean;
 		private var scrollBarSize:Number = 20;				//  default size is 20 pixels wide or tall
@@ -21,146 +21,178 @@ package bubbletools.ui.parameters {
 		private var scrollBarImageId:String;
 		private var scrollBarOutline:Number = 0;
 		private var scrollBarSliderOutline:Number = 0;
-		private var scrollBarSliderImageId:String;      
-		
+		private var scrollBarSliderImageId:String;
+
 		private var scrollBarArrows:Boolean = false;	  			//  whether the window's scroll bars have max/min arrows    
 		private var scrollBarArrowsClustered:Boolean = false;		//  clustering of scroll bar arrows at bottom or right  
-		private var scrollBarArrowMaxDefault:String; 
-		private var scrollBarArrowMaxOver:String; 	 
+		private var scrollBarArrowMaxDefault:String;
+		private var scrollBarArrowMaxOver:String;
 		private var scrollBarArrowMaxDown:String;
 		private var scrollBarArrowMinDefault:String;
-		private var scrollBarArrowMinOver:String;    
-		private var scrollBarArrowMinDown:String;  	 
+		private var scrollBarArrowMinOver:String;
+		private var scrollBarArrowMinDown:String;
 
-		public function HTMLDisplayParameters(){
+		public function HTMLDisplayParameters() {
 			super();
 			componentType = "HTMLDisplay";
 			backgroundColor = 0xFFFFFFFF;					// default color is white
-			useGlobalTint = false;							
+			useGlobalTint = false;
 
 		}
-		
+
 		//	External URL for html
 		public function setURL(url:String):void {
 			this.url = url;
 		}
+
 		public function getURL():String {
-			return(url);
+			return (url);
 		}
 
 		// Show a vertical scrollbar
 		public function setScrollVertical(scrollVertical:Boolean):void {
 			this.scrollVertical = scrollVertical;
 		}
+
 		public function getScrollVertical():Boolean {
-			return(scrollVertical);
+			return (scrollVertical);
 		}
+
 		// Show a horizontal scrollbar
 		public function setScrollHorizontal(scrollHorizontal:Boolean):void {
 			this.scrollHorizontal = scrollHorizontal;
 		}
+
 		public function getScrollHorizontal():Boolean {
-			return(scrollHorizontal);
+			return (scrollHorizontal);
 		}
+
 		// Scrollbar size
 		public function setScrollBarSize(scrollBarSize:Number):void {
 			this.scrollBarSize = scrollBarSize;
 		}
+
 		public function getScrollBarSize():Number {
-			return(scrollBarSize);
+			return (scrollBarSize);
 		}
+
 		// Scrollbar slider size
 		public function setScrollBarSliderSize(scrollBarSliderSize:Number):void {
 			this.scrollBarSliderSize = scrollBarSliderSize;
 		}
+
 		public function getScrollBarSliderSize():Number {
-			return(scrollBarSliderSize);
+			return (scrollBarSliderSize);
 		}
+
 		// Scrollbar Image
 		public function setScrollBarImage(scrollBarImageId:String):void {
 			this.scrollBarImageId = scrollBarImageId;
 		}
+
 		public function getScrollBarImage():String {
-			return(scrollBarImageId)
+			return (scrollBarImageId)
 		}
+
 		// Scrollbar slider Image
 		public function setScrollBarSliderImage(scrollBarSliderImageId:String):void {
 			this.scrollBarSliderImageId = scrollBarSliderImageId;
 		}
+
 		public function getScrollBarSliderImage():String {
-			return(scrollBarSliderImageId)
+			return (scrollBarSliderImageId)
 		}
+
 		// Scrollbar slider outline
 		public function setScrollBarSliderOutline(scrollBarSliderOutline:Number):void {
 			this.scrollBarSliderOutline = scrollBarSliderOutline;
 		}
+
 		public function getScrollBarSliderOutline():Number {
-			return(scrollBarSliderOutline)
+			return (scrollBarSliderOutline)
 		}
+
 		// Scrollbar outline		
 		public function setScrollBarOutline(scrollBarOutline:Number):void {
 			this.scrollBarOutline = scrollBarOutline;
 		}
+
 		public function getScrollBarOutline():Number {
-			return(scrollBarOutline)
-		}  
+			return (scrollBarOutline)
+		}
+
 		// Has scroll arrows or not
 		public function setScrollBarArrows(scrollBarArrows:Boolean):void {
 			this.scrollBarArrows = scrollBarArrows;
 		}
+
 		public function getScrollBarArrows():Boolean {
-			return(scrollBarArrows);
+			return (scrollBarArrows);
 		}
+
 		// Scrollbar arrows cluster or not
 		public function setScrollBarArrowsClustered(scrollBarArrowsClustered:Boolean):void {
 			this.scrollBarArrowsClustered = scrollBarArrowsClustered;
 		}
+
 		public function getScrollBarArrowsClustered():Boolean {
-			return(scrollBarArrowsClustered);
-		}         
+			return (scrollBarArrowsClustered);
+		}
+
 		// Scrollbar arrow max default image
 		public function setScrollBarArrowMaxDefault(scrollBarArrowMaxDefault:String):void {
 			this.scrollBarArrowMaxDefault = scrollBarArrowMaxDefault;
 		}
+
 		public function getScrollBarArrowMaxDefault():String {
-			return(scrollBarArrowMaxDefault);
+			return (scrollBarArrowMaxDefault);
 		}
+
 		// Scrollbar arrow max over image
 		public function setScrollBarArrowMaxOver(scrollBarArrowMaxOver:String):void {
 			this.scrollBarArrowMaxOver = scrollBarArrowMaxOver;
 		}
+
 		public function getScrollBarArrowMaxOver():String {
-			return(scrollBarArrowMaxOver);
-		}   
+			return (scrollBarArrowMaxOver);
+		}
+
 		// Scrollbar arrow max down image
 		public function setScrollBarArrowMaxDown(scrollBarArrowMaxDown:String):void {
 			this.scrollBarArrowMaxDown = scrollBarArrowMaxDown;
 		}
+
 		public function getScrollBarArrowMaxDown():String {
-			return(scrollBarArrowMaxDown);
+			return (scrollBarArrowMaxDown);
 		}
+
 		// Scrollbar arrow min default image
 		public function setScrollBarArrowMinDefault(scrollBarArrowMinDefault:String):void {
 			this.scrollBarArrowMinDefault = scrollBarArrowMinDefault;
 		}
+
 		public function getScrollBarArrowMinDefault():String {
-			return(scrollBarArrowMinDefault);
+			return (scrollBarArrowMinDefault);
 		}
+
 		// Scrollbar arrow min over image
 		public function setScrollBarArrowMinOver(scrollBarArrowMinOver:String):void {
 			this.scrollBarArrowMinOver = scrollBarArrowMinOver;
 		}
+
 		public function getScrollBarArrowMinOver():String {
-			return(scrollBarArrowMinOver);
-		}   
+			return (scrollBarArrowMinOver);
+		}
+
 		// Scrollbar arrow min down image
 		public function setScrollBarArrowMinDown(scrollBarArrowMinDown:String):void {
 			this.scrollBarArrowMinDown = scrollBarArrowMinDown;
 		}
+
 		public function getScrollBarArrowMinDown():String {
-			return(scrollBarArrowMinDown);
-		}   
-		
+			return (scrollBarArrowMinDown);
+		}
+
 	}
 
 }

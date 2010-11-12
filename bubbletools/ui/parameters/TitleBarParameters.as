@@ -7,7 +7,7 @@
 // =================================================================================================
 
 package bubbletools.ui.parameters {
-	
+
 	import flash.display.Sprite;
 	import bubbletools.util.Pointdata;
 	import bubbletools.ui.parameters.InterfaceParameters;
@@ -16,15 +16,14 @@ package bubbletools.ui.parameters {
 	import bubbletools.core.library.BitmapFile;
 	import bubbletools.ui.framework.UI;
 
-
 	public class TitleBarParameters extends InterfaceParameters {
-	
+
 		private var closeButton:Boolean = false;			//  default option is no close button
 		private var closeButtonImage:String;
 		private var titleTextFont:String = "Arial";			//  Default is Arial
 		private var titleTextFontSize:Number = 12;			//  Default is 12 point font
-	
-		public function TitleBarParameters(){
+
+		public function TitleBarParameters() {
 			super();
 			componentType = "TitleBar";
 			backgroundColor = 0xFFBBBBBB;   				//  default color is grey
@@ -35,31 +34,38 @@ package bubbletools.ui.parameters {
 		public function setTitleTextFont(titleTextFont:String):void {
 			this.titleTextFont = titleTextFont;
 		}
+
 		public function getTitleTextFont():String {
-			return(titleTextFont);
+			return (titleTextFont);
 		}
+
 		// Titlebar Text Font Size
 		public function setTitleTextFontSize(titleTextFontSize:Number):void {
 			this.titleTextFontSize = titleTextFontSize;
 		}
+
 		public function getTitleTextFontSize():Number {
-			return(titleTextFontSize);
+			return (titleTextFontSize);
 		}
+
 		// Has close button
 		public function setCloseButton(closeButton:Boolean):void {
 			this.closeButton = closeButton;
 		}
+
 		public function getCloseButton():Boolean {
-			return(closeButton);
+			return (closeButton);
 		}
+
 		// Close button image
 		public function setCloseButtonImage(closeButtonImage:String):void {
 			this.closeButtonImage = closeButtonImage;
 		}
+
 		public function getCloseButtonImage():String {
 			return closeButtonImage;
 		}
-	
+
 	}
 
 }

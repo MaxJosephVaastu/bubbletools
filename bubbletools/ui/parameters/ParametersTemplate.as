@@ -7,24 +7,25 @@
 // =================================================================================================
 
 package bubbletools.ui.parameters {
-	
+
 	import bubbletools.ui.parameters.InterfaceParameters;
 
 	public class ParametersTemplate extends InterfaceParameters {
-	
+
 		private var param:String = "template"				// An example parameter
-	
-		public function ParametersTemplate(){
+
+		public function ParametersTemplate() {
 			componentType = "Template";						// Use the same name as the component type
 			backgroundColor = 0xFFFFFFFF;					// Set default inherited parameters here
 		}
-	
+
 		// Describe what the parameter does
 		public function setParam(param:String):void {
 			this.param = param;
 		}
+
 		public function getParam():String {
-			return(param);
+			return (param);
 		}
 
 	}

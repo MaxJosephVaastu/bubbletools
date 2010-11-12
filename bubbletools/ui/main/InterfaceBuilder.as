@@ -7,12 +7,12 @@
 // =================================================================================================
 
 package bubbletools.ui.main {
-	
+
 	import bubbletools.ui.framework.BTComponent;
 
 	public class InterfaceBuilder {
-		function InterfaceBuilder(){
-		
+		function InterfaceBuilder() {
+
 		}
 	}
 

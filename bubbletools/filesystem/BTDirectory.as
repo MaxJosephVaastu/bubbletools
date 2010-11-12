@@ -7,17 +7,15 @@
 // =================================================================================================  
 
 package bubbletools.filesystem {
-	
+
 	public class BTDirectory extends BTFileObject {
 
-		public function BTDirectory() {   
-			
+		public function BTDirectory() {
+
 			byteSize = 0;
-				
-	   
+
 		}
-			
+
 	}
-		
+
 }
-                                                                                                                                                

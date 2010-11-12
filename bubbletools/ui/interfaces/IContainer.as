@@ -9,13 +9,13 @@
 package bubbletools.ui.interfaces {
 
 	import bubbletools.util.Pointdata;
-	
+
 	public interface IContainer {
-	
+
 		function getContentOffset():Pointdata;
-		
+
 		function setContentOffset(p:Pointdata):void;
-		
+
 	}
 
 }
