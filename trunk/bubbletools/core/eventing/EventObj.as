@@ -7,12 +7,12 @@
 // =================================================================================================
 
 package bubbletools.core.eventing {
-	
+
 	import bubbletools.core.eventing.IEvent;
 	import bubbletools.core.eventing.EventManager;
 
 	public class EventObj implements IEvent {
-		
+
 		public var name:String;
 		public var info:Object
 		public var id:Number;
@@ -21,8 +21,9 @@ package bubbletools.core.eventing {
 		public function expire():void {
 			EventManager.instance().expireEvent(id);
 		}
+
 		public function getType():String {
-			return(type);
+			return (type);
 		}
 	}
 

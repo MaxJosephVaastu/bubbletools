@@ -7,46 +7,45 @@
 // =================================================================================================
 
 package bubbletools.ui.main {
-	
-	
+
 	public class Defaults {
-		
+
 		private static var _instance:Defaults = null;
 		private var defaultsIndex:Array;
-		
+
 		public static function instance():Defaults {
 			if (Defaults._instance == null) {
 				Defaults._instance = new Defaults();
 			}
 			return Defaults._instance;
 		}
-		
-		public function Defaults(){
-			
+
+		public function Defaults() {
+
 			defaultsIndex = new Array();
-			
+
 		}
-		
+
 		public function contains(parameter:String):Boolean {
-			
-			if(defaultsIndex[parameter] != undefined) {
+
+			if (defaultsIndex[parameter] != undefined) {
 				return true;
 			} else {
 				return false;
 			}
-			
+
 		}
-		
+
 		public function add(parameter:String, value:String):void {
-			
+
 			defaultsIndex[parameter] = value;
-			
+
 		}
-		
+
 		public function value(parameter:String):String {
-			
-			return(defaultsIndex[parameter]);
-			
+
+			return (defaultsIndex[parameter]);
+
 		}
 
 	}

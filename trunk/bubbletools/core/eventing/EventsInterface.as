@@ -7,13 +7,13 @@
 // =================================================================================================
 
 package bubbletools.core.eventing {
-	
-import bubbletools.core.eventing.IEvent;
 
-public interface EventsInterface {
-	
-	function createEvent(name:String, info:Object, EventType:Class):IEvent;
+	import bubbletools.core.eventing.IEvent;
 
-}
+	public interface EventsInterface {
+
+		function createEvent(name:String, info:Object, EventType:Class):IEvent;
+
+	}
 
 }

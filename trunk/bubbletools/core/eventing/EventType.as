@@ -7,9 +7,9 @@
 // =================================================================================================
 
 package bubbletools.core.eventing {
-	
+
 	public class EventType {
-		
+
 		public static var MOUSE_PRESS:String = "mouse_press";
 		public static var MOUSE_RELEASE:String = "mouse_release";
 		public static var MOUSE_OVER:String = "mouse_over";
@@ -22,9 +22,10 @@ package bubbletools.core.eventing {
 		public static var MOUSE_WHEEL_DOWN:String = "mouse_wheel_down";
 		public static var MOUSE_SHIFT_CLICK:String = "mouse_shift_click";
 		public static var MOUSE_CONTROL_CLICK:String = "mouse_double_click";
-			
-		public function EventType(){}
-		
+
+		public function EventType() {
+		}
+
 	}
 
 }

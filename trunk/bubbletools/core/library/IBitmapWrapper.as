@@ -7,19 +7,19 @@
 // =================================================================================================
 
 package bubbletools.core.library {
-	
+
 	import flash.display.BitmapData;
 
 	//	Defines the minimum functions a bitmap wrapper must implement
-	
+
 	public interface IBitmapWrapper {
 
 		//  Returns the BitmapData from the wrapper object
 
 		function getBitmapData():BitmapData;
-		
+
 		//  Returns whether this is a proxy container (BitmapProxy) or file container (BitmapFile)
-		
+
 		function getProxyStatus():Boolean;
 
 	}

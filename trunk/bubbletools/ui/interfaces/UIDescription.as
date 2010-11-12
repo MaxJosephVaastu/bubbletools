@@ -7,19 +7,20 @@
 // =================================================================================================
 
 package bubbletools.ui.interfaces {
-	
-import bubbletools.ui.framework.BTComponent;
-//
-//	Defines the minimum functions an interface description class must implement
-//
+
+	import bubbletools.ui.framework.BTComponent;
+
+	//
+	//	Defines the minimum functions an interface description class must implement
+	//
 	public interface UIDescription {
-	
+
 		// Instructions for building the UI
-	
+
 		function defineInterface():void;
-	
+
 		// Returns the root of this UI
-	
+
 		function getInterface():BTComponent;
 	}
 

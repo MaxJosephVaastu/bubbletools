@@ -7,46 +7,46 @@
 // =================================================================================================
 
 package bubbletools.ui.main {
-	
+
 	public class ParameterDefault {
-	
+
 		private var componentType:String;
 		private var attributeName:String;
 		private var nodeId:String;
-		
+
 		private var _exists:Boolean;
-		
+
 		private var paramTextValue:String;
-	
+
 		public function ParameterDefault(componentType:String, attributeName:String, nodeId:String) {
 			this.componentType = componentType;
 			this.attributeName = attributeName;
 			this.nodeId = nodeId;
 		}
-		
+
 		public function applyTextValue(paramTextValue:String):void {
 			_exists = true;
 			this.paramTextValue = paramTextValue;
 		}
-		
+
 		public function getType():String {
-			return(componentType);
+			return (componentType);
 		}
-		
+
 		public function getAttribute():String {
-			return(attributeName);
+			return (attributeName);
 		}
-		
+
 		public function getNodeId():String {
-			return(nodeId);
+			return (nodeId);
 		}
-		
+
 		public function textValue():String {
-			return(paramTextValue);
+			return (paramTextValue);
 		}
-		
+
 		public function exists():Boolean {
-			return(_exists);
+			return (_exists);
 		}
 
 	}

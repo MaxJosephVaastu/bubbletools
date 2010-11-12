@@ -7,15 +7,15 @@
 // =================================================================================================
 
 package bubbletools.util {
-	
+
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
 
 	public class TextHelper {
-	
+
 		// class to draw simple messages to the screen in a standard format
-	
+
 		public static function makeText(x:Number, y:Number, w:Number, h:Number, t:String):TextField {
 			var textFormat:TextFormat = new TextFormat();
 			textFormat.font = "Tahoma";
@@ -32,7 +32,7 @@ package bubbletools.util {
 			newText.wordWrap = true;
 			newText.setTextFormat(textFormat);
 			Main.instance().addChild(newText);
-			return(newText);
+			return (newText);
 		}
 	}
 

@@ -6,37 +6,37 @@
 // License Information : Contact Developer to obtain license agreement.
 // =================================================================================================    
 
-package bubbletools.filesystem {              
-	                              
+package bubbletools.filesystem {
+
 	import bubbletools.core.async.XmlLoader;
 	import bubbletools.util.Debug;
-	
+
 	private var selectedFile:BTFileObject;
-	
+
 	private static var _instance:BTFileSystem;
 	private static var _FSML:String;
-	
-	public class BTFileSystem extends Requesting {   
-		
+
+	public class BTFileSystem extends Requesting {
+
 		private var fileCount:Number = 0;
 		private var byteCount:Number = 0;
-		private var files:Array;     
-		private var selectedFile:IFileObject;        
-		
-		public static function init(FSML:String):void { 
+		private var files:Array;
+		private var selectedFile:IFileObject;
+
+		public static function init(FSML:String):void {
 			_FSML = FSML;
 			_instance = new BTFileSystem();
-		}   
+		}
 
-		public function BTFileSystem() { 
-        	files = new Array();
+		public function BTFileSystem() {
+			files = new Array();
 			startLoad();
-		}          
-                   
+		}
+
 		// Load XML representing a file hierarchy
-		
+
 		public function startLoad():void {
-			if(_FSML) {
+			if (_FSML) {
 				var myLoader:XmlLoader = new XmlLoader();
 				setHandler(FSMLLoaded);
 				setError(FSMLFailed);
@@ -46,41 +46,40 @@ package bubbletools.filesystem {
 				Debug.output(this, "No FSML file was specified to load.");
 			}
 		}
-		
+
 		public function FSMLFailed():void {
-		   
+
 		}
-		
+
 		// Parse FSML
-		
+
 		public function FSMLLoaded(xmlData:XML):void {
 			Debug.output(this, "FSML loaded, begin parse.");
-			
-		}     
-		
+
+		}
+
 		// Filesystem functions
-		
+
 		public function setSelectedFile(f:IFileObject) {
-			if(f != selectedFile) {
+			if (f != selectedFile) {
 				selectedFile.deselect();
-			   	selectedFile = f;
-			}   
-			Debug.output(this, "selected file "+f.name);
-		 }
-		
-	    public function addFile(f:IFileObject):void {   
-			
+				selectedFile = f;
+			}
+			Debug.output(this, "selected file " + f.name);
+		}
+
+		public function addFile(f:IFileObject):void {
+
 			if (f.getFileId() == undefined) {
 				f.setFileId(files.length);
-			}                   
-			
+			}
+
 			fileCount = files.push(f);
 			byteCount += f.getByteSize();
-		}                      
-		        
-		
-		public function removeFile(f:IFileObject):void {   
-			
+		}
+
+		public function removeFile(f:IFileObject):void {
+
 			var fileToDelete = null;
 			if (theFileToDelete != null) {
 				fileToDelete = theFileToDelete;
@@ -88,7 +87,7 @@ package bubbletools.filesystem {
 				fileToDelete = this.selectedFile;
 				this.selectedFile = null;
 			}
-			myDebug("Deleting File : "+fileToDelete.name);
+			myDebug("Deleting File : " + fileToDelete.name);
 			// kill file on server
 			if (fileToDelete.type != "folder") {
 				if (fileToDelete.myOwner == bubbleDesk.currentUser.userName) {
@@ -97,7 +96,7 @@ package bubbletools.filesystem {
 					deleteButton.myButtonClip.button.enabled = false;
 					var eraseURL = "eraseFile.php";
 					var dataToSend = new LoadVars();
-					dataToSend.fileToErase = "users/"+currentUser.userName+"/files/"+fileToDelete.datasource;
+					dataToSend.fileToErase = "users/" + currentUser.userName + "/files/" + fileToDelete.datasource;
 					dataToSend.onLoad = function(success) {
 						if (success) {
 							bubbleDesk.deleteButton.myButtonClip.backing.gotoAndStop(1);
@@ -110,14 +109,14 @@ package bubbletools.filesystem {
 			} else {
 				myDebug("Erasing subfolders");
 				var folderContents = fileToDelete.frameObject.attachedFiles;
-				for (var j = 0; j<folderContents.length; j++) {
+				for (var j = 0; j < folderContents.length; j++) {
 					this.removeFile(folderContents[j]);
 				}
 			}
 			// search icons
 			var iconArrayID = null;
 			fileToDelete.iconObject.theIconClip.removeMovieClip();
-			for (var j = 0; j<allicons.length; j++) {
+			for (var j = 0; j < allicons.length; j++) {
 				var compareIcon = allicons[j];
 				if (fileToDelete.iconObject == compareIcon) {
 					iconArrayID = j;
@@ -129,7 +128,7 @@ package bubbletools.filesystem {
 			var windowArrayID = null;
 			if (fileToDelete.windowIsAttached) {
 				fileToDelete.attachedWindow.myWindowClip.removeMovieClip();
-				for (var j = 0; j<allwindows.length; j++) {
+				for (var j = 0; j < allwindows.length; j++) {
 					var compareWindow = allwindows[j];
 					if (fileToDelete.attachedWindow == compareWindow) {
 						windowArrayID = j;
@@ -140,7 +139,7 @@ package bubbletools.filesystem {
 			allwindows.splice(windowArrayID, 1);
 			// search filesystem
 			var fileArrayID = null;
-			for (var j = 0; j<this.files.length; j++) {
+			for (var j = 0; j < this.files.length; j++) {
 				var compareFile = this.files[j];
 				if (fileToDelete == compareFile) {
 					fileArrayID = j;
@@ -150,9 +149,8 @@ package bubbletools.filesystem {
 			this.files.splice(fileArrayID, 1);
 			//
 			fileToDelete.parentFrame.detach(fileToDelete);
-		}       
+		}
 
-		}                 
+	}
 
 }
-     

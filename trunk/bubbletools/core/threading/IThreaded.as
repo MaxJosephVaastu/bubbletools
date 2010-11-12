@@ -7,13 +7,13 @@
 // =================================================================================================
 
 package bubbletools.core.threading {
-	
+
 	public interface IThreaded {
-		
+
 		function setThreadId(threadId:Number):void;
-		
+
 		function setReturnHandler(returnHandler:Function):void
-		
+
 	}
 
 }

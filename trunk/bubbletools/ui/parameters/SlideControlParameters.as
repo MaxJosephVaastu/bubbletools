@@ -7,65 +7,77 @@
 // =================================================================================================
 
 package bubbletools.ui.parameters {
-	
+
 	import bubbletools.ui.framework.BTComponent;
 	import bubbletools.ui.parameters.InterfaceParameters;
 
 	public class SlideControlParameters extends InterfaceParameters {
-	
+
 		private var controlDirection:String;
 		private var sliderOutline:Number = 0;					//default is 0px outline on sliders
 		private var sliderImageId:String;
 		private var sliderButtonColor:uint = 0xFFFFFFFF;		//default color is white
 		private var sliderButtonColorDown:uint = 0xFFCCCCCC;	//default color is grey
 		private var sliderSize:Number = 50						//default slider height is 50 px
-	
-		public function SlideControlParameters(){
+
+		public function SlideControlParameters() {
 			super();
 			componentType = "SlideControl";
 		}
+
 		// Scrollbar slider size
 		public function setSliderSize(sliderSize:Number):void {
 			this.sliderSize = sliderSize;
 			backgroundColor = 0xFFEEEEEE;   					//default color is light grey
 		}
+
 		public function getSliderSize():Number {
-			return(sliderSize);
+			return (sliderSize);
 		}
+
 		// Slider outline
 		public function setSliderOutline(sliderOutline:Number):void {
 			this.sliderOutline = sliderOutline;
 		}
+
 		public function getSliderOutline():Number {
-			return(sliderOutline);
+			return (sliderOutline);
 		}
+
 		// Slider image
 		public function setSliderImage(sliderImageId:String):void {
 			this.sliderImageId = sliderImageId;
 		}
+
 		public function getSliderImage():String {
-			return(sliderImageId);
+			return (sliderImageId);
 		}
+
 		// Direction of control (vertical or horizontal)
 		public function setControlDirection(controlDirection:String):void {
 			this.controlDirection = controlDirection;
 		}
+
 		public function getControlDirection():String {
-			return(controlDirection);
+			return (controlDirection);
 		}
+
 		// Slider Background Color
 		public function setSliderButtonColor(sliderButtonColor:uint):void {
 			this.sliderButtonColor = sliderButtonColor;
 		}
+
 		public function getSliderButtonColor():Number {
-			return(sliderButtonColor);
+			return (sliderButtonColor);
 		}
+
 		// Slider Background Down Color
 		public function setSliderButtonColorDown(sliderButtonColorDown:uint):void {
 			this.sliderButtonColorDown = sliderButtonColorDown;
 		}
+
 		public function getSliderButtonColorDown():Number {
-			return(sliderButtonColorDown);
+			return (sliderButtonColorDown);
 		}
 
 	}

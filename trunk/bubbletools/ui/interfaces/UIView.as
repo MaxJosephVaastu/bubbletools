@@ -7,23 +7,23 @@
 // =================================================================================================
 
 package bubbletools.ui.interfaces {
-	
+
 	public interface UIView {
-		
+
 		//  Called from UIMLView when an invalid UIML file was loaded     
 		//  Includes the filename
 		function renderFailed(UIML:String):void;
-		
+
 		//  Called from UIMLView when the intial UI has loaded and has started to draw
 		function renderStarted():void;
-		
+
 		//  Called from UIMLView when injected XML has loaded and has started to draw
 		function renderAdditionalStarted(uiName:String):void;
-		
+
 		//  Called from UIMLView only after it has been notified by applicationReady(),
 		//  so the both UI and any other application content are ready.
 		function applicationComplete():void;
-	
+
 	}
 
 }
