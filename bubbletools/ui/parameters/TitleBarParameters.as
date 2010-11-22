@@ -14,7 +14,7 @@ package bubbletools.ui.parameters {
 
 	import flash.display.BitmapData;
 	import bubbletools.core.library.BitmapFile;
-	import bubbletools.ui.framework.UI;
+	import bubbletools.ui.framework.BTUI;
 
 	public class TitleBarParameters extends InterfaceParameters {
 
