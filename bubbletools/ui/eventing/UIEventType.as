@@ -125,7 +125,8 @@ package bubbletools.ui.eventing {
 
 		// VideoSeek Events
 
-		public static var VIDEO_SEEK:String = "video_seek";
+		public static var VIDEO_SEEK_START:String = "video_seek_start";
+		public static var VIDEO_SEEK_COMPLETE:String = "video_seek_complete";
 
 		// HTML Display Events
 
