@@ -31,7 +31,7 @@ package bubbletools.util {
 			newText.text = t;
 			newText.wordWrap = true;
 			newText.setTextFormat(textFormat);
-			Main.instance().addChild(newText);
+			BTCanvas._instance.addChild(newText);
 			return (newText);
 		}
 	}
