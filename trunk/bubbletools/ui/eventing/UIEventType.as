@@ -122,6 +122,7 @@ package bubbletools.ui.eventing {
 		public static var NETSTREAM_PLAY_START:String = "netstream_play_start";
 		public static var NETSTREAM_PLAY_STOP:String = "netstream_play_stop";
 		public static var NETSTREAM_EVENT_DUMP:String = "netstream_event_dump";
+		public static var NETSTREAM_CUE_POINT:String = "netstream_cue_point";
 
 		// VideoSeek Events
 
