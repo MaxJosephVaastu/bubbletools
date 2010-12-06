@@ -23,6 +23,10 @@ package bubbletools.core.eventing {
 		public static var MOUSE_SHIFT_CLICK:String = "mouse_shift_click";
 		public static var MOUSE_CONTROL_CLICK:String = "mouse_double_click";
 
+		public static var SPRITE_ANIMATION_COMPLETE:String = "sprite_animation_complete";
+		public static var SPRITE_FADEIN_COMPLETE:String = "sprite_fadein_complete";
+		public static var SPRITE_FADEOUT_COMPLETE:String = "sprite_fadeout_complete";
+
 		public function EventType() {
 		}
 

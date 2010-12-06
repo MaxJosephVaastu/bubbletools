@@ -56,6 +56,9 @@ package bubbletools.ui.eventing {
 		public static var WINDOW_OUT:String = "window_out";
 		public static var WINDOW_OVER:String = "window_over";
 		public static var WINDOW_MOVE:String = "window_move";
+		public static var WINDOW_ANIMATION_COMPLETE:String = "window_animation_complete";
+		public static var WINDOW_FADEIN_COMPLETE:String = "window_fadein_complete";
+		public static var WINDOW_FADEOUT_COMPLETE:String = "window_fadeout_complete";
 
 		// TitleBar Events
 
@@ -133,6 +136,11 @@ package bubbletools.ui.eventing {
 
 		public static var HTML_SIZE_CHANGED:String = "html_size_changed";
 		public static var HTML_COMPLETE:String = "html_complete";
+
+		// SWF Display Events
+
+		public static var SWF_PRESS:String = "swf_press";
+		public static var SWF_LOADED:String = "swf_loaded";
 
 		// Icon Events
 
