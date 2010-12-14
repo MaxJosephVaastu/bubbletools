@@ -12,16 +12,17 @@ package bubbletools.ui.parameters {
 
 	public class HTMLDisplayParameters extends InterfaceParameters {
 
-		private var url:String;								// the url to display
+		private var url:String;										// the url to display
 
 		private var scrollHorizontal:Boolean;
 		private var scrollVertical:Boolean;
-		private var scrollBarSize:Number = 20;				//  default size is 20 pixels wide or tall
-		private var scrollBarSliderSize:Number = 50			//  default size is 50 pixels wide or tall
+		private var scrollBarSize:Number = 20;						//  default size is 20 pixels wide or tall
+		private var scrollBarSliderSize:Number = 50					//  default size is 50 pixels wide or tall
 		private var scrollBarImageId:String;
 		private var scrollBarOutline:Number = 0;
 		private var scrollBarSliderOutline:Number = 0;
 		private var scrollBarSliderImageId:String;
+		private var scrollBarOffset:Number = 0;						//  offset on scrollbar placement (right or bottom)
 
 		private var scrollBarArrows:Boolean = false;	  			//  whether the window's scroll bars have max/min arrows    
 		private var scrollBarArrowsClustered:Boolean = false;		//  clustering of scroll bar arrows at bottom or right  
@@ -35,9 +36,8 @@ package bubbletools.ui.parameters {
 		public function HTMLDisplayParameters() {
 			super();
 			componentType = "HTMLDisplay";
-			backgroundColor = 0xFFFFFFFF;					// default color is white
+			backgroundColor = 0xFFFFFFFF;							// default color is white
 			useGlobalTint = false;
-
 		}
 
 		//	External URL for html
@@ -191,6 +191,15 @@ package bubbletools.ui.parameters {
 
 		public function getScrollBarArrowMinDown():String {
 			return (scrollBarArrowMinDown);
+		}
+
+		// Scrollbar arrow min down image
+		public function setScrollBarOffset(scrollBarOffset:Number):void {
+			this.scrollBarOffset = scrollBarOffset;
+		}
+
+		public function getScrollBarOffset():Number {
+			return (scrollBarOffset);
 		}
 
 	}
