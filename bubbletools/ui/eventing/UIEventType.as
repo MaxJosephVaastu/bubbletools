@@ -51,6 +51,7 @@ package bubbletools.ui.eventing {
 		// Window Events
 
 		public static var WINDOW_PRESS:String = "window_press";
+		public static var WINDOW_CLICK:String = "window_click";
 		public static var WINDOW_RELEASE:String = "window_release";
 		public static var WINDOW_DROPPED_ON:String = "window_dropped_on";
 		public static var WINDOW_OUT:String = "window_out";
