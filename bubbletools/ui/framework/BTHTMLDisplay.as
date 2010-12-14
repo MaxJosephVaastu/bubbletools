@@ -37,7 +37,7 @@ package bubbletools.ui.framework {
 		private var htmlLoader:HTMLLoader;
 		private var htmlRequest:URLRequest;
 
-		private var scrollBarWidthOffset:Number = 0;
+		private var scrollBarTotalOffset:Number = 0;
 
 		public function BTHTMLDisplay(parentComponent:BTComponent) {
 			super(parentComponent);
@@ -66,6 +66,10 @@ package bubbletools.ui.framework {
 
 			// Create Scroll Bars
 
+			if (parameters.getScrollHorizontal() || parameters.getScrollVertical()) {
+				scrollBarTotalOffset = parameters.getScrollBarSize() + parameters.getScrollBarOffset();
+			}
+
 			if (parameters.getScrollVertical()) {
 
 				v = new ScrollBarParameters();
@@ -73,7 +77,7 @@ package bubbletools.ui.framework {
 				v.setControlDirection("vertical");
 				v.setScrollTarget(this);
 				v.setSize(new Pointdata(parameters.getScrollBarSize(), getParameters().getSize().Y));
-				v.setLocation(new Pointdata(getParameters().getSize().X - parameters.getScrollBarSize(), 0));
+				v.setLocation(new Pointdata(getParameters().getSize().X - parameters.getScrollBarSize() + parameters.getScrollBarOffset(), 0));
 				v.setSliderSize(parameters.getScrollBarSliderSize());
 				v.setOutline(parameters.getScrollBarOutline());
 				v.setSliderOutline(parameters.getScrollBarSliderOutline());
@@ -96,19 +100,22 @@ package bubbletools.ui.framework {
 					v.setArrowMinDown(parameters.getScrollBarArrowMinDown());
 				}
 
-				verticalScrollBar = BTScrollBar(this.addComponent("ScrollBar", v));
+				// Adjust overall component size parameters if scrollbar is offset with a gap to the side
 
-				scrollBarWidthOffset = parameters.getScrollBarSize();
+				parameters.setSize(new Pointdata(parameters.getSize().X + parameters.getScrollBarOffset(), parameters.getSize().Y));
+
+				verticalScrollBar = BTScrollBar(this.addComponent("ScrollBar", v));
 
 			}
 
 			if (parameters.getScrollHorizontal()) {
+
 				h = new ScrollBarParameters();
 				v.setId(getId() + "_scroll_horizontal");
 				h.setControlDirection("horizontal");
 				h.setScrollTarget(this);
 				h.setSize(new Pointdata(getParameters().getSize().X, parameters.getScrollBarSize()));
-				h.setLocation(new Pointdata(0, getParameters().getSize().Y - parameters.getScrollBarSize()));
+				h.setLocation(new Pointdata(0, getParameters().getSize().Y - parameters.getScrollBarSize() + parameters.getScrollBarOffset()));
 				h.setOutline(parameters.getScrollBarOutline());
 				h.setSliderOutline(parameters.getScrollBarSliderOutline());
 
@@ -122,6 +129,10 @@ package bubbletools.ui.framework {
 					h.setArrowMinOver(parameters.getScrollBarArrowMinOver());
 					h.setArrowMinDown(parameters.getScrollBarArrowMinDown());
 				}
+
+				// Adjust overall component size parameters if scrollbar is offset with a gap to the side
+
+				parameters.setSize(new Pointdata(parameters.getSize().X, parameters.getSize().Y + parameters.getScrollBarOffset()));
 
 				horizontalScrollBar = BTScrollBar(this.addComponent("ScrollBar", h));
 
@@ -138,7 +149,7 @@ package bubbletools.ui.framework {
 
 		private function createLoader():void {
 			htmlLoader = new HTMLLoader();
-			htmlLoader.width = getParameters().getSize().X - scrollBarWidthOffset;
+			htmlLoader.width = getParameters().getSize().X - scrollBarTotalOffset;
 			htmlLoader.height = getParameters().getSize().Y;
 			htmlLoader.addEventListener(Event.HTML_BOUNDS_CHANGE, onHtmlBoundsChange);
 			htmlLoader.addEventListener(Event.COMPLETE, onHtmlComplete);
