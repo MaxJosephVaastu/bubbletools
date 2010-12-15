@@ -19,8 +19,8 @@ package bubbletools.ui.framework {
 
 		public var parameters:ScrollableParameters;
 
-		private var verticalScrollBar:BTScrollBar;
-		private var horizontalScrollBar:BTScrollBar;
+		public var verticalScrollBar:BTScrollBar;
+		public var horizontalScrollBar:BTScrollBar;
 		private var v:ScrollBarParameters;
 		private var h:ScrollBarParameters;
 
