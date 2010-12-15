@@ -8,9 +8,6 @@
 
 package bubbletools.ui.parameters {
 
-	import bubbletools.ui.framework.BTComponent;
-	import bubbletools.ui.parameters.InterfaceParameters;
-
 	public class SlideControlParameters extends InterfaceParameters {
 
 		private var controlDirection:String;

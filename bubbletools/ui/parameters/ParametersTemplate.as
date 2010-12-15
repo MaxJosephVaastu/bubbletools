@@ -8,8 +8,6 @@
 
 package bubbletools.ui.parameters {
 
-	import bubbletools.ui.parameters.InterfaceParameters;
-
 	public class ParametersTemplate extends InterfaceParameters {
 
 		private var param:String = "template"				// An example parameter
