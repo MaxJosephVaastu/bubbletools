@@ -15,7 +15,7 @@ package bubbletools.ui.framework {
 	import bubbletools.ui.parameters.*;
 	import bubbletools.util.Debug;
 	import bubbletools.util.Pointdata;
-	
+
 	import flash.events.Event;
 	import flash.net.URLRequest;
 	import flash.html.HTMLLoader;
@@ -23,11 +23,6 @@ package bubbletools.ui.framework {
 	public class BTHTMLDisplay extends BTScrollable implements Reporter, IContainer {
 
 		private var extendedParameters:HTMLDisplayParameters;
-
-		private var verticalScrollBar:BTScrollBar;
-		private var horizontalScrollBar:BTScrollBar;
-		private var v:ScrollBarParameters;
-		private var h:ScrollBarParameters;
 
 		private var contentOffset:Pointdata;
 
