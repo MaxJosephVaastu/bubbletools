@@ -8,9 +8,6 @@
 
 package bubbletools.ui.parameters {
 
-	import flash.display.BitmapData;
-	import bubbletools.ui.parameters.InterfaceParameters;
-
 	public class VideoDisplayParameters extends InterfaceParameters {
 
 		public function VideoDisplayParameters() {

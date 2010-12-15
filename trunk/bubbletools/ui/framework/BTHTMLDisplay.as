@@ -11,21 +11,18 @@ package bubbletools.ui.framework {
 	import bubbletools.ui.eventing.*;
 	import bubbletools.ui.framework.*;
 	import bubbletools.ui.interfaces.IContainer;
-	import bubbletools.ui.interfaces.IParameters;
 	import bubbletools.ui.interfaces.Reporter;
 	import bubbletools.ui.parameters.*;
 	import bubbletools.util.Debug;
 	import bubbletools.util.Pointdata;
-
-	import flash.display.Sprite;
+	
 	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.html.HTMLLoader;
 	import flash.net.URLRequest;
+	import flash.html.HTMLLoader;
 
-	public class BTHTMLDisplay extends BTComponent implements Reporter, IContainer {
+	public class BTHTMLDisplay extends BTScrollable implements Reporter, IContainer {
 
-		private var parameters:HTMLDisplayParameters;
+		private var extendedParameters:HTMLDisplayParameters;
 
 		private var verticalScrollBar:BTScrollBar;
 		private var horizontalScrollBar:BTScrollBar;
@@ -60,83 +57,11 @@ package bubbletools.ui.framework {
 		//  Required Override Methods
 		//
 
-		public override function setParameters(newParameters:IParameters):void {
-			globalParameters = newParameters;
-			parameters = HTMLDisplayParameters(newParameters);
+		// Since this class extends BTScrollable, use extendParameters to set BTHTMLDisplay parmeters
 
-			// Create Scroll Bars
+		public override function extendParameters():void {
 
-			if (parameters.getScrollHorizontal() || parameters.getScrollVertical()) {
-				scrollBarTotalOffset = parameters.getScrollBarSize() + parameters.getScrollBarOffset();
-			}
-
-			if (parameters.getScrollVertical()) {
-
-				v = new ScrollBarParameters();
-				v.setId(getId() + "_scroll_vertical");
-				v.setControlDirection("vertical");
-				v.setScrollTarget(this);
-				v.setSize(new Pointdata(parameters.getScrollBarSize(), getParameters().getSize().Y));
-				v.setLocation(new Pointdata(getParameters().getSize().X - parameters.getScrollBarSize() + parameters.getScrollBarOffset(), 0));
-				v.setSliderSize(parameters.getScrollBarSliderSize());
-				v.setOutline(parameters.getScrollBarOutline());
-				v.setSliderOutline(parameters.getScrollBarSliderOutline());
-
-				if (parameters.getScrollBarImage() != null) {
-					v.setImage(parameters.getScrollBarImage());
-				}
-				if (parameters.getScrollBarSliderImage() != null) {
-					v.setSliderImage(parameters.getScrollBarSliderImage());
-				}
-
-				if (parameters.getScrollBarArrows()) {
-					v.setArrows(true);
-					v.setArrowsClustered(parameters.getScrollBarArrowsClustered());
-					v.setArrowMaxDefault(parameters.getScrollBarArrowMaxDefault());
-					v.setArrowMaxOver(parameters.getScrollBarArrowMaxOver());
-					v.setArrowMaxDown(parameters.getScrollBarArrowMaxDown());
-					v.setArrowMinDefault(parameters.getScrollBarArrowMinDefault());
-					v.setArrowMinOver(parameters.getScrollBarArrowMinOver());
-					v.setArrowMinDown(parameters.getScrollBarArrowMinDown());
-				}
-
-				// Adjust overall component size parameters if scrollbar is offset with a gap to the side
-
-				parameters.setSize(new Pointdata(parameters.getSize().X + parameters.getScrollBarOffset(), parameters.getSize().Y));
-
-				verticalScrollBar = BTScrollBar(this.addComponent("ScrollBar", v));
-
-			}
-
-			if (parameters.getScrollHorizontal()) {
-
-				h = new ScrollBarParameters();
-				v.setId(getId() + "_scroll_horizontal");
-				h.setControlDirection("horizontal");
-				h.setScrollTarget(this);
-				h.setSize(new Pointdata(getParameters().getSize().X, parameters.getScrollBarSize()));
-				h.setLocation(new Pointdata(0, getParameters().getSize().Y - parameters.getScrollBarSize() + parameters.getScrollBarOffset()));
-				h.setOutline(parameters.getScrollBarOutline());
-				h.setSliderOutline(parameters.getScrollBarSliderOutline());
-
-				if (parameters.getScrollBarArrows()) {
-					h.setArrows(true);
-					h.setArrowsClustered(parameters.getScrollBarArrowsClustered());
-					h.setArrowMaxDefault(parameters.getScrollBarArrowMaxDefault());
-					h.setArrowMaxOver(parameters.getScrollBarArrowMaxOver());
-					h.setArrowMaxDown(parameters.getScrollBarArrowMaxDown());
-					h.setArrowMinDefault(parameters.getScrollBarArrowMinDefault());
-					h.setArrowMinOver(parameters.getScrollBarArrowMinOver());
-					h.setArrowMinDown(parameters.getScrollBarArrowMinDown());
-				}
-
-				// Adjust overall component size parameters if scrollbar is offset with a gap to the side
-
-				parameters.setSize(new Pointdata(parameters.getSize().X, parameters.getSize().Y + parameters.getScrollBarOffset()));
-
-				horizontalScrollBar = BTScrollBar(this.addComponent("ScrollBar", h));
-
-			}
+			extendedParameters = HTMLDisplayParameters(parameters);
 
 			createLoader();
 
@@ -156,7 +81,7 @@ package bubbletools.ui.framework {
 		}
 
 		public function loadNewURL(url:String):void {
-			parameters.setURL(url);
+			extendedParameters.setURL(url);
 			loadPage();
 		}
 
@@ -168,7 +93,7 @@ package bubbletools.ui.framework {
 
 			htmlLoader.visible = false;
 			view.setContents(htmlLoader);
-			htmlRequest = new URLRequest(parameters.getURL());
+			htmlRequest = new URLRequest(extendedParameters.getURL());
 			htmlLoader.load(htmlRequest);
 		}
 
@@ -195,26 +120,18 @@ package bubbletools.ui.framework {
 			view.scale(new Pointdata(W, H));
 			propagateResize(W, H);
 
-			if (parameters.getScrollVertical()) {
-				verticalScrollBar.setNewPosition(getParameters().getScaledSize().X - parameters.getScrollBarSize(), 0);
-				verticalScrollBar.resize(parameters.getScrollBarSize(), getParameters().getScaledSize().Y);
+			if (extendedParameters.getScrollVertical()) {
+				verticalScrollBar.setNewPosition(getParameters().getScaledSize().X - extendedParameters.getScrollBarSize(), 0);
+				verticalScrollBar.resize(extendedParameters.getScrollBarSize(), getParameters().getScaledSize().Y);
 			}
 
-			if (parameters.getScrollHorizontal()) {
-				horizontalScrollBar.resize(getParameters().getSize().X, parameters.getScrollBarSize());
+			if (extendedParameters.getScrollHorizontal()) {
+				horizontalScrollBar.resize(getParameters().getSize().X, extendedParameters.getScrollBarSize());
 			}
 		}
 
 		public function getHTMLLoader():HTMLLoader {
 			return htmlLoader;
-		}
-
-		public function setContentOffset(contentOffset:Pointdata):void {
-			this.contentOffset = contentOffset;
-		}
-
-		public function getContentOffset():Pointdata {
-			return (contentOffset);
 		}
 
 		public function scrollToPercent(p:Number):void {

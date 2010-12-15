@@ -8,14 +8,9 @@
 
 package bubbletools.ui.framework {
 
-	import flash.events.MouseEvent;
-	import flash.display.Sprite;
-	import bubbletools.util.Pointdata;
-	import bubbletools.util.MouseEventCapture;
-	import bubbletools.ui.eventing.*
-	import bubbletools.ui.framework.*
-	import bubbletools.ui.parameters.*
-	import bubbletools.ui.framework.ComponentView;
+	import bubbletools.ui.eventing.*;
+	import bubbletools.ui.framework.*;
+	import bubbletools.ui.parameters.*;
 
 	public class BTComponentTemplate extends BTComponent {
 

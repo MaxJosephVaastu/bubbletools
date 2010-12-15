@@ -8,14 +8,6 @@
 
 package bubbletools.ui.parameters {
 
-	import flash.display.Sprite;
-	import bubbletools.util.Pointdata;
-	import bubbletools.ui.parameters.InterfaceParameters;
-
-	import flash.display.BitmapData;
-	import bubbletools.core.library.BitmapFile;
-	import bubbletools.ui.framework.BTUI;
-
 	public class TitleBarParameters extends InterfaceParameters {
 
 		private var closeButton:Boolean = false;			//  default option is no close button
