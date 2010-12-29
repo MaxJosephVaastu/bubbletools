@@ -141,6 +141,17 @@ package bubbletools.ui.framework {
 			}
 		}
 
+		public function resetScrollbars():void {
+
+			if (parameters.getScrollVertical()) {
+				verticalScrollBar.resetSlider();
+			}
+
+			if (parameters.getScrollHorizontal()) {
+				horizontalScrollBar.resetSlider();
+			}
+		}
+
 		public function setContentOffset(contentOffset:Pointdata):void {
 			this.contentOffset = contentOffset;
 		}
