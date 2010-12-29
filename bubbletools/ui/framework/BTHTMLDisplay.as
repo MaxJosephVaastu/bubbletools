@@ -76,6 +76,7 @@ package bubbletools.ui.framework {
 		}
 
 		public function loadNewURL(url:String):void {
+			resetScrollbars();
 			extendedParameters.setURL(url);
 			loadPage();
 		}
@@ -103,6 +104,7 @@ package bubbletools.ui.framework {
 			htmlLoader.visible = false;
 			view.clearContents();
 			loadNewURL("about:blank");
+			resetScrollbars();
 		}
 
 		//  =====================================================================================================
