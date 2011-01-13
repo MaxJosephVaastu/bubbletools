@@ -15,7 +15,7 @@ package bubbletools.ui.parameters {
 		private var sliderImageId:String;
 		private var sliderButtonColor:uint = 0xFFFFFFFF;		//default color is white
 		private var sliderButtonColorDown:uint = 0xFFCCCCCC;	//default color is grey
-		private var sliderSize:Number = 50						//default slider height is 50 px
+		private var sliderSize:Number = 50;						//default slider height is 50 px
 
 		public function SlideControlParameters() {
 			super();
