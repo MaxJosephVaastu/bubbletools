@@ -3,6 +3,7 @@
 	<name>BubbletoolsOS</name>
 	<comment></comment>
 	<projects>
+		<project>Bubble3D</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
