@@ -21,7 +21,7 @@ package bubbletools.util {
 			textFormat.font = "Tahoma";
 			textFormat.size = "10";
 			textFormat.align = TextFormatAlign.LEFT;
-			var newText = new TextField();
+			var newText:TextField = new TextField();
 			newText.textColor = 0x000000;
 			newText.width = w;
 			newText.height = h;
@@ -31,7 +31,7 @@ package bubbletools.util {
 			newText.text = t;
 			newText.wordWrap = true;
 			newText.setTextFormat(textFormat);
-			BTCanvas._instance.addChild(newText);
+			Main.instance().addChild(newText);
 			return (newText);
 		}
 	}
