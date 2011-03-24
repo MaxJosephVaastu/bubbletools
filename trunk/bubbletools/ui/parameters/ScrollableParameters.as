@@ -29,11 +29,23 @@ package bubbletools.ui.parameters {
 		private var scrollBarArrowMinOver:String;
 		private var scrollBarArrowMinDown:String;
 
+		private var draggableByContent:Boolean = false;
+
 		public function ScrollableParameters() {
 			super();
 			componentType = "Scrollable";
 			backgroundColor = 0xFFFFFFFF;							// default color is white
 			useGlobalTint = false;
+		}
+
+		// Draggable on listed items
+
+		public function setDraggableByContent(draggableByContent:Boolean):void {
+			this.draggableByContent = draggableByContent;
+		}
+
+		public function getDraggableByContent():Boolean {
+			return draggableByContent;
 		}
 
 		// Show a vertical scrollbar

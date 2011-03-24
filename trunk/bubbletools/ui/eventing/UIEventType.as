@@ -90,7 +90,9 @@ package bubbletools.ui.eventing {
 
 		// ListItem Events
 
+		public static var LIST_ITEM_PRESS:String = "list_item_press";
 		public static var LIST_ITEM_RELEASE:String = "list_item_release";
+		public static var LIST_ITEM_RELEASE_OUTSIDE:String = "list_item_release_outside";
 
 		// SlideControl Events
 
