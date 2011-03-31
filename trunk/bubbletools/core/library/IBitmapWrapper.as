@@ -18,6 +18,10 @@ package bubbletools.core.library {
 
 		function getBitmapData():BitmapData;
 
+		//  Returns a copy of the BitmapData
+
+		function getBitmapDataCopy():BitmapData;
+
 		//  Returns whether this is a proxy container (BitmapProxy) or file container (BitmapFile)
 
 		function getProxyStatus():Boolean;
