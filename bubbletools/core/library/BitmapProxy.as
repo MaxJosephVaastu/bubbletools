@@ -8,11 +8,12 @@
 
 package bubbletools.core.library {
 
+	import bubbletools.core.library.BitmapFile;
+
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.geom.Point;
-
-	import bubbletools.core.library.BitmapFile;
+	import flash.geom.Rectangle;
 
 	public class BitmapProxy implements IBitmapWrapper {
 
@@ -34,6 +35,7 @@ package bubbletools.core.library {
 				updates[i].width = w;
 				updates[i].height = h;
 			}
+			updates = null;
 		}
 
 		public function addUpdate(bitmap:Bitmap):void {
@@ -41,6 +43,16 @@ package bubbletools.core.library {
 		}
 
 		// IBitmapWrapper Implementation
+
+		public function getBitmapDataCopy():BitmapData {
+
+			var newBitmapData:BitmapData = new BitmapData(proxyData.width, proxyData.height, true, 0x00000000);
+			var copyFrom:Rectangle = new Rectangle(0, 0, proxyData.width, proxyData.height);
+			var copyTo:Point = new Point(0, 0);
+			newBitmapData.copyPixels(proxyData, copyFrom, copyTo);
+
+			return (newBitmapData);
+		}
 
 		public function getBitmapData():BitmapData {
 			return (proxyData);
