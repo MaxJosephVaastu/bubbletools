@@ -10,32 +10,11 @@ package bubbletools.ui.parameters {
 
 	public class SliderParameters extends SlideControlParameters {
 
-		//private var barImageId:String;
-		//private var sliderImageId:String;
-
 		public function SliderParameters() {
 			super();
 			componentType = "Slider";
 		}
-	/*
-			// Scrollbar Image
-			public function setBarImage(scrollBarImageId:String):void {
-				this.barImageId = scrollBarImageId;
-			}
 
-			public function getBarImage():String {
-				return (barImageId)
-			}
-
-			// Scrollbar slider Image
-			public function setSliderImage(sliderImageId:String):void {
-				this.sliderImageId = sliderImageId;
-			}
-
-			public function getSliderImage():String {
-				return (sliderImageId)
-			}
-			*/
 	}
 
 }
