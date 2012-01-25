@@ -99,6 +99,7 @@ package bubbletools.ui.eventing {
 		public static var SLIDE_CONTROL_PRESS:String = "slide_control_press";
 		public static var SLIDE_CONTROL_RELEASE:String = "slide_control_release";
 		public static var SLIDE_CONTROL_MOVE:String = "slide_control_move";
+		public static var SLIDE_CONTROL_SLIDER_RELEASE:String = "slide_control_slider_release";
 
 		// TextDisplay Events
 
@@ -164,3 +165,4 @@ package bubbletools.ui.eventing {
 	}
 
 }
+
